@@ -1,0 +1,36 @@
+[project]
+name = "cubicsplat-repro"
+version = "0.1.0"
+description = "Minimal CubicSplat reproduction code isolated from auxiliary vectorization operators."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "apache-tvm-ffi==0.1.11",
+    "nvidia-cuda-cccl>=13.3,<13.4",
+    "nvidia-cuda-nvcc>=13.3,<13.4",
+    "nvidia-nvvm>=13.3,<13.4",
+    "pillow>=12.1.1",
+    "ray>=2.54.0; sys_platform != 'win32'",
+    "rich>=14.3.2",
+    "structlog>=25.5.0",
+    "tilelang[nvcc]>=0.1.7.post3",
+    "torchmetrics>=1.8.2",
+    "torchvision>=0.25.0",
+    "torch>=2.10",
+]
+
+[dependency-groups]
+dev = [
+    "matplotlib>=3.10.8",
+]
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
