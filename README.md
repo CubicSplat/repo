@@ -82,11 +82,28 @@ uv run python evaluate.py output_kodak/ --ref-dir datasets/kodak --lpips --ray-m
 ## Citation
 
 ```bibtex
-@inproceedings{liu2026cubicsplat,
-  title     = {CubicSplat: Differentiable Vector Graphics via Error-Bounded Forward Relaxation},
-  author    = {Liu, Chenglong and Zhang, Xin and Zhu, Yimeng and He, Liyang and
-               Ma, Yixiao and Su, Yu and Huang, Zhenya and Liu, Qi},
-  booktitle = {European Conference on Computer Vision (ECCV)},
-  year      = {2026}
+@InProceedings{10.1007/978-3-032-37232-1_32,
+  author="Liu, Chenglong
+  and Zhang, Xin
+  and Zhu, Yimeng
+  and He, Liyang
+  and Ma, Yixiao
+  and Su, Yu
+  and Huang, Zhenya
+  and Liu, Qi",
+  editor="Favaro, Paolo
+  and Kukelova, Zuzana
+  and Maki, Atsuto
+  and Rohrbach, Anna
+  and Schindler, Konrad
+  and Tombari, Federico",
+  title="CubicSplat: Differentiable Vector Graphics via Error-Bounded Forward Relaxation",
+  booktitle="Computer Vision -- ECCV 2026",
+  year="2026",
+  publisher="Springer Nature Switzerland",
+  address="Cham",
+  pages="582--599",
+  abstract="Vector graphics are prized for their resolution independence, compact storage, and direct editability, making differentiable optimization of their parametric primitives an attractive goal. Yet classical rasterization is discontinuous with respect to geometry, and existing remedies that smooth the forward pass demand increasingly elaborate heuristics as scene complexity grows. We trace this fragility to a gradient seesaw: design choices that improve forward geometric exactness can systematically degrade the induced gradient signal, and vice versa. To navigate this tension we introduce CubicSplat, a differentiable vector rasterizer that replaces B{\'e}zier closest-point solvers with uniform polyline surrogates whose geometric error is bounded at {\$}{\$}{\backslash}mathcal {\{}O{\}}(S^{\{}-2{\}}){\$}{\$}O(S-2). The resulting static computation graph yields well-conditioned gradients by construction, while a compositing-derived visibility mechanism prunes degenerate primitives without auxiliary regularization. On DIV2K and Kodak benchmarks CubicSplat achieves state-of-the-art reconstruction quality with over 2 dB PSNR gain in the closed-fill setting, while training up to {\$}{\$}{\{}{\backslash}textbf {\{}4{\}}{\}}{\{}{\backslash}times {\}}{\$}{\$}4{\texttimes}faster than prior methods. The code is available at https://github.com/CubicSplat/repo.",
+  isbn="978-3-032-37232-1"
 }
 ```
