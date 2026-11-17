@@ -3,6 +3,8 @@ name = "cubicsplat-repro"
 version = "0.1.0"
 description = "Minimal CubicSplat reproduction code isolated from auxiliary vectorization operators."
 readme = "README.md"
+license = "MIT OR Apache-2.0"
+license-files = ["LICENSE", "LICENSE-MIT", "LICENSE-APACHE"]
 requires-python = ">=3.13"
 dependencies = [
     "apache-tvm-ffi==0.1.11",
